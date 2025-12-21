@@ -14,26 +14,14 @@ using namespace std;
 #define FAST_IO ios::sync_with_stdio(false); cin.tie(nullptr);
 
 
-class Solution {
-public:
-    void solve() {
-      
-        ll n;
-        cin >> n;
-
-      
-    }
-};
-
 int main() {
-    FAST_IO;
-    ll t;
+    FAST_IO
+    int t;
     cin >> t;
-    
     while (t--) {
-        Solution s;
-        s.solve();
+        ll n,k;
+        cin >>  n >> k;
+       
     }
-
     return 0;
 }
