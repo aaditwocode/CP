@@ -1,46 +1,38 @@
 #include <bits/stdc++.h>
-
 using namespace std;
+
+void solve() {
+    int n;
+    cin >> n;
+    string s;
+    cin >> s;
+
+    int max_block = 0, current_block = 0, total_dots = 0;
+
+    for (char c : s) {
+        if (c == '.') {
+            total_dots++;
+            current_block++;
+            max_block = max(max_block, current_block);
+        } else {
+            current_block = 0;
+        }
+    }
+
+    if (max_block >= 3) {
+        cout << 2 << "\n";
+    } else {
+        cout << total_dots << "\n";
+    }
+}
 
 int main() {
     ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-    cout.tie(nullptr);
-
-    int test_cases;
-    cin >> test_cases;
-
-    while (test_cases--) {
-        int string_length;
-        cin >> string_length;
-
-        string input_string;
-        cin >> input_string;
-
-        int minimum_placements = 0;
-
-        for (int index = 0; index < string_length; index++) {
-            if (input_string[index] == '.') {
-                int consecutive_dots = 0;
-
-                while (index < string_length && input_string[index] == '.') {
-                    consecutive_dots++;
-                    index++;
-                }
-
-                if (consecutive_dots > 2) {
-                    minimum_placements = 2;
-                    break;
-                } else {
-                    minimum_placements += consecutive_dots;
-                }
-                
-                index--; 
-            }
-        }
-
-        cout << minimum_placements << '\n';
+    cin.tie(NULL);
+    int t;
+    cin >> t;
+    while (t--) {
+        solve();
     }
-
     return 0;
 }
