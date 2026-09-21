@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+ 
 #define ll long long
 #define ull unsigned long long
 #define pb push_back
@@ -12,16 +12,18 @@ using namespace std;
 #define MOD 1000000007
 #define INF 1e18
 #define FAST_IO ios::sync_with_stdio(false); cin.tie(nullptr);
-
-
+ 
+ 
 int main() {
     FAST_IO
     int t;
     cin >> t;
     while (t--) {
-        ll n,k;
-        cin >>  n >> k;
-       
+
+        ll a, b, c;
+        cin >> a >> b >> c;
+        
+        }
     }
     return 0;
 }
